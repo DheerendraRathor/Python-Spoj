@@ -11,6 +11,12 @@ Here are [installation instructions](https://github.com/mitsuhiko/pipsi#readme).
 Simply run:
 
     $ pipsi install .
+    or 
+    $ pip install .
+    or
+    $ easy_install .
+    or
+    $ python setup.py install
 
 
 # Usage
