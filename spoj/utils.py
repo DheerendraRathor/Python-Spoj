@@ -77,3 +77,9 @@ def animate(msg):
         sys.stdout.write('\r%s %s' % (a, msg))
         sys.stdout.flush()
         time.sleep(0.5)
+
+
+def ask_credentials():
+    username = raw_input('Username: ')
+    password = ask_pass()
+    return username, password

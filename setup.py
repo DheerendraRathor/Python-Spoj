@@ -4,7 +4,7 @@ An spoj library for python
 from setuptools import find_packages, setup
 
 
-dependencies = ['click']
+dependencies = ['click', 'mechanize', 'beautifulsoup4', 'configparser']
 
 setup(
     name='python_spoj',

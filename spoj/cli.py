@@ -3,6 +3,7 @@ import lang
 import utils
 import config as Config
 from spoj import Spoj
+import multiprocessing
 
 @click.group()
 @click.version_option()
@@ -12,17 +13,26 @@ def main(ctx):
 
 
 @click.command()
-@click.argument('filename', required=True, type=click.File(lazy=True))
+@click.argument('filename', required=True, type=click.File())
 @click.option('--problem', '-p', help='Problem code')
 @click.option('--language', '-l', help='Language of problem. \033[91mSee `spoj language`\033[0m',
               type=click.Choice(map(str, sorted([lan[0] for lan in lang.LANG]))))
 def submit(filename, problem, language):
     if problem is None:
         name = filename.name
-        name = name.split('.')[-2]
+        name = name.split('/')[-1]
+        try:
+            name = name.split('.')[-2]
+        except Exception:
+            name = name.split('.')[-1]
         problem = name.upper()
-    #TODO: problem_submit(filename, problem, language)
-    click.echo('Initialized the database')
+    spoj = Spoj(problem,language,filename)
+    submit_status, message = spoj.submit()
+    if submit_status:
+        print message
+        spoj.fetch_status()
+    else:
+        print message
 
 
 @click.command()
@@ -32,8 +42,7 @@ def submit(filename, problem, language):
 @click.pass_context
 def config(ctx, language, credential):
     if credential:
-        username = raw_input('Username: ')
-        password = utils.ask_pass()
+        username, password = utils.ask_credentials()
         click.echo('Verifying Credentials...Please wait')
         creds = Spoj.verify_credentials(username, password)
         if not creds:
@@ -53,6 +62,7 @@ def language():
 @click.command()
 def status():
     pass
+
 
 main.add_command(submit)
 main.add_command(config)

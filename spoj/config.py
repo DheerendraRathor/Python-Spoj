@@ -26,3 +26,13 @@ def set_language(language):
     config.set('language', 'name', lang.LANG_DICT[int(language)])
     with open(utils.get_config_file(), 'wb') as configfile:
         config.write(configfile)
+
+
+def get_credentials():
+    config = ConfigParser.ConfigParser()
+    config.read([utils.get_config_file()])
+    if not config.has_option('user', 'username'):
+        return None, None
+    if not config.has_option('user', 'password'):
+        return None, None
+    return config.get('user', 'username'), utils.decode(config.get('user', 'password'))
