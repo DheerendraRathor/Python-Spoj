@@ -3,7 +3,7 @@ import lang
 import utils
 import config as Config
 from spoj import Spoj
-import multiprocessing
+
 
 @click.group()
 @click.version_option()
@@ -17,7 +17,8 @@ def main(ctx):
 @click.option('--problem', '-p', help='Problem code')
 @click.option('--language', '-l', help='Language of problem. \033[91mSee `spoj language`\033[0m',
               type=click.Choice(map(str, sorted([lan[0] for lan in lang.LANG]))))
-def submit(filename, problem, language):
+@click.pass_context
+def submit(ctx, filename, problem, language):
     if problem is None:
         name = filename.name
         name = name.split('/')[-1]
@@ -26,6 +27,12 @@ def submit(filename, problem, language):
         except Exception:
             name = name.split('.')[-1]
         problem = name.upper()
+    if language is None:
+        language = Config.get_language()
+    if language is None:
+        language = raw_input('Language (Integer): ')
+        if language not in map(str, [lan[0] for lan in lang.LANG]):
+            ctx.exit('Language not supported. Please check `spoj language`.')
     spoj = Spoj(problem,language,filename)
     submit_status, message = spoj.submit()
     if submit_status:

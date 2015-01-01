@@ -28,6 +28,14 @@ def set_language(language):
         config.write(configfile)
 
 
+def get_language():
+    config = ConfigParser.ConfigParser()
+    config.read([utils.get_config_file()])
+    if config.has_option('language', 'code'):
+        return config.get('language', 'code')
+    else:
+        return None
+
 def get_credentials():
     config = ConfigParser.ConfigParser()
     config.read([utils.get_config_file()])
