@@ -1,5 +1,7 @@
 site_name: Python SPOJ
 theme: readthedocs
+repo_url: https://www.github.com/DheerendraRathor/python-spoj.git
+site_author: Dheerendra Rathor
 pages:
 - [index.md, Home]
 - [installation.md, Installation]
