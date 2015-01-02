@@ -14,6 +14,6 @@ and use the following command.
 `$ python setup.py install`
 
 After installing the package, you need to configure it (Configuration is not necessary but suggested). 
-For configuration refere [Configuration](config) page. 
+For configuration refere [Configuration](configuration.md) page. 
 
 
