@@ -27,6 +27,7 @@ def submit(ctx, filename, problem, language):
         except Exception:
             name = name.split('.')[-1]
         problem = name.upper()
+    problem = problem.upper()
     if language is None:
         language = Config.get_language()
     if language is None:

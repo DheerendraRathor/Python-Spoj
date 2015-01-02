@@ -1,0 +1,10 @@
+site_name: Python SPOJ
+theme: readthedocs
+pages:
+- [index.md, Home]
+- [installation.md, Installation]
+- [./configuration.md, Configuration]
+- [command/language.md, Language]
+- [command/submit.md, Submit]
+- [command/status.md, Status]
+- [about.md, About]
