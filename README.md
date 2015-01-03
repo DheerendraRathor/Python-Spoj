@@ -1,5 +1,7 @@
 # Python Spoj
-[![Downloads](https://pypip.in/download/python_spoj/badge.svg)](https://pypi.python.org/pypi/python_spoj/) [![Latest Version](https://pypip.in/version/python_spoj/badge.svg)](https://pypi.python.org/pypi/python_spoj/)
+[![Build Status](https://travis-ci.org/DheerendraRathor/Python-Spoj.svg?branch=master)](https://travis-ci.org/DheerendraRathor/Python-Spoj)
+[![Downloads](https://pypip.in/download/python_spoj/badge.svg)](https://pypi.python.org/pypi/python_spoj/)
+[![Latest Version](https://pypip.in/version/python_spoj/badge.svg)](https://pypi.python.org/pypi/python_spoj/)
 [![Documentation Status](https://readthedocs.org/projects/python-spoj/badge/?version=latest)](https://readthedocs.org/projects/python-spoj/?badge=latest)  
 An spoj library for python
 
