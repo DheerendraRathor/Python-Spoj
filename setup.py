@@ -8,7 +8,7 @@ dependencies = ['click', 'mechanize', 'beautifulsoup4', 'configparser']
 
 setup(
     name='python_spoj',
-    version='0.5.2',
+    version='0.5.3',
     url='https://github.com/DheerendraRathor/python-spoj',
     license='BSD',
     author='Dheerendra Rathor',
