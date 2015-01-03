@@ -1,7 +1,7 @@
 Python SPOJ
 ===========
 
-This is a command line tool to help you submit your problems easily to [SPOJ](http://www.spoj.com) using your linux terminal.
+This is a command line tool to help you submit your problems easily to `SPOJ <http://www.spoj.com>`_ using your linux terminal.
 Using this package is as easy as using any other command line tool.
 
 Contents:
@@ -15,6 +15,7 @@ Contents:
    language.rst
    submit.rst
    status.rst
+   about.rst
 
 
 
