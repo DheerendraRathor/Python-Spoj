@@ -1,6 +1,8 @@
 site_name: Python SPOJ
+site_url: https://pypi.python.org/pypi/python_spoj
+site_description: A command line tool for SPOJ written in python
 theme: readthedocs
-repo_url: https://www.github.com/DheerendraRathor/python-spoj.git
+repo_url: https://github.com/DheerendraRathor/python-spoj/
 site_author: Dheerendra Rathor
 pages:
 - [index.md, Home]
