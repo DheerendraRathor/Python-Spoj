@@ -17,5 +17,20 @@ Contents:
    status.rst
    about.rst
 
+Basic Commands
+^^^^^^^^^^^^^^
 
+* :command:`spoj --help`
+    Display the help content for the main command
+
+* :command:`spoj --version`
+    Display the version string of the project
+
+* :command:`spoj <subcommand> --help`
+    Display help content for subcommand. Available subcommands are:
+
+    * :doc:`config <configuration>`
+    * :doc:`language <language>`
+    * :doc:`submit <submit>`
+    * :doc:`status <status>`
 
