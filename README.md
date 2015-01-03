@@ -23,7 +23,7 @@ to install it.
 
 Documentation is present at [Read the Docs](http://python-spoj.rtfd.org) and also at the [PythonHosted](https://pythonhosted.org/python_spoj/)
 
-# Usage
+## Usage
 
 To use it:
 
